@@ -1,0 +1,78 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import ExperienceCard from "./ExperienceCard.astro";
+---
+
+<section id="experience" class="my-12">
+    <SectionTitle title="Experiencia laboral" />
+
+    <div class="flex flex-col gap-8">
+        <ExperienceCard
+            company="Universidad de Magallanes"
+            role="Programador principal - Proyecto InES Ciencia Abierta"
+            startDate="Enero del 2024"
+            endDate="Actualidad"
+        >
+            <div>
+                <p class="mb-4">
+                    Mi principal tarea durante este trabajo fue la
+                    implementacion de una plataforma CRIS mediante el uso DSpace
+                    CRIS. Me encargué de la personalizacion de la plataforma a
+                    nivel visual usando Angular 15, implementacion de metadatos
+                    en los formularios de las entidades mediante archivos XML y
+                    configuracion del Backend utlizando Java 17.
+                </p>
+                <p>
+                    La plataforma resultante puede ser accedida en el siguiente
+                    enlace: <a
+                        class="text-[#e75ad5]"
+                        href="https://investigacion.umag.cloud"
+                        target="_blank">https://investigacion.umag.cloud</a
+                    >
+                </p>
+            </div>
+            <hr class="my-4" />
+            <div class="flex justify-between">
+                <h4 class="text-[#f512d6]">Tecnologias utilizadas</h4>
+                <ul class="flex gap-4">
+                    <li class="flex items-center">
+                        <img
+                            src="images/angular.webp"
+                            alt="Angular 15"
+                            width="32"
+                            height="32"
+                            title="Angular 15"
+                        />
+                    </li>
+                    <li class="flex items-center">
+                        <img
+                            src="images/dspace.png"
+                            alt="DSpace CRIS"
+                            width="32"
+                            height="32"
+                            title="DSpace CRIS 7"
+                        />
+                    </li>
+                    <li class="flex items-center">
+                        <img
+                            src="images/bootstrap.svg"
+                            alt="Bootstrap 4"
+                            width="32"
+                            height="32"
+                            title="Bootstrap 4"
+                        />
+                    </li>
+                    <li class="flex items-center">
+                        <img
+                            src="images/java.png"
+                            alt="Java 17"
+                            width="32"
+                            height="32"
+                            title="Java 17"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </ExperienceCard>
+    </div>
+</section>
