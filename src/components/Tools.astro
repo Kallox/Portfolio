@@ -1,0 +1,68 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import Card from "./Card.astro";
+---
+
+<section id="skills" class="my-12">
+    <SectionTitle title="Herramientas y tecnologías" />
+
+    <div>
+        <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            <Card
+                title="React"
+                description="Utilizado para proyectos simples de CSR"
+                img="images/tools/react.svg"
+            />
+            <Card
+                title="NextJS"
+                description="Utilizado para proyectos complejos de SSR y SSG"
+                img="images/tools/nextjs.svg"
+            />
+            <Card
+                title="Astro"
+                description="Utilizado en proyectos simples de sitios web estáticos"
+                img="images/tools/astro.svg"
+            />
+            <Card
+                title="ExpressJS"
+                description="Creación de API REST con Javascript"
+                img="images/tools/express.svg"
+            />
+            <Card
+                title="Python"
+                description="Utilizado para la creación de scripts y API REST"
+                img="images/tools/python.svg"
+            />
+            <Card
+                title="FastAPI"
+                description="Creación de API REST con Python"
+                img="images/tools/fastapi.svg"
+            />
+            <Card
+                title="Pandas"
+                description="Usado para el análisis de datos"
+                img="images/tools/pandas.svg"
+            />
+            <Card
+                title="PostgreSQL"
+                description="Base de datos que suelo usar en mis proyectos"
+                img="images/tools/postgresql.svg"
+            />
+            <Card
+                title="WordPress"
+                description="Usado para proyectos de blogs"
+                img="images/tools/wordpress.svg"
+            />
+            <Card
+                title="TailwindCSS"
+                description="Framework de CSS que suelo usar en mis proyectos"
+                img="images/tools/tailwind.svg"
+            />
+            <Card
+                title="Bootstrap"
+                description="Framework de CSS que he utilizado para proyecto de DSpace CRIS"
+                img="images/tools/bootstrap.svg"
+            />
+        </ul>
+    </div>
+</section>
