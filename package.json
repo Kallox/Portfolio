@@ -1,5 +1,5 @@
 {
-    "name": "Portfolio Kallox",
+    "name": "portfolio-kallox",
     "type": "module",
     "version": "0.0.1",
     "scripts": {
@@ -10,10 +10,10 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/check": "^0.9.2",
-        "@astrojs/tailwind": "^5.1.0",
-        "astro": "^4.13.3",
-        "tailwindcss": "^3.4.9",
+        "@astrojs/check": "0.9.6",
+        "@tailwindcss/vite": "4.1.18",
+        "astro": "^5.16.6",
+        "tailwindcss": "4.1.18",
         "typescript": "^5.5.4"
     },
     "devDependencies": {
