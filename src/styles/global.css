@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: oklch(0.12 0.04 285);
+  --foreground: oklch(0.95 0.015 285);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Segoe UI", "Arial", "Helvetica Neue", sans-serif;
+  --font-mono: "Fira Mono", "Consolas", "Menlo", "Monaco", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animated-background {
+  background-image: linear-gradient(to right, oklch(0.25 0.08 285 / 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.25 0.08 285 / 0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+.gradient-overlay {
+  background: radial-gradient(circle at 50% 0%, oklch(0.35 0.15 285 / 0.3) 0%, transparent 60%),
+    radial-gradient(circle at 0% 50%, oklch(0.35 0.18 295 / 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, oklch(0.35 0.12 275 / 0.2) 0%, transparent 50%);
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
