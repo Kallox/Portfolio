@@ -1,6 +1,5 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
-import Card from "./Card.astro";
 
 const projects = [
     {
@@ -24,14 +23,14 @@ const projects = [
 ];
 ---
 
-<section id="projects" class="my-12">
+<section id="projects" class="container mx-auto px-4 py-16">
     <SectionTitle title="Proyectos personales" />
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
             projects.map((project) => (
                 <li class="flex flex-col">
-                    <div class="bg-zinc-800/75 shadow-lg rounded-xl border-2 border-purple-700 overflow-hidden">
+                    <div class="bg-[#0c091f] backdrop-blur shadow-lg rounded-xl border-2 border-primary overflow-hidden">
                         <img
                             src={project.img}
                             alt="project image"
@@ -40,10 +39,10 @@ const projects = [
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold mb-2 text-purple-300">
+                            <h3 class="text-xl font-bold mb-2">
                                 {project.title}
                             </h3>
-                            <p class="text-sm text-gray-300 mb-4">
+                            <p class="text-muted-foreground mb-4 leading-relaxed">
                                 {project.description}
                             </p>
                             <hr class="my-4" />
@@ -53,7 +52,7 @@ const projects = [
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        class="bg-purple-700 hover:bg-purple-500 text-white px-4 py-2 rounded-md text-sm flex items-center justify-center"
+                                        class="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-md text-sm flex items-center justify-center"
                                     >
                                         Live
                                     </a>
