@@ -2,7 +2,12 @@
 import Link from "./Link.astro";
 ---
 
-<header class="flex justify-center p-8 bg-zinc-800/75 sticky top-0">
+<header
+    class="flex justify-between bg-background/80 backdrop-blur-lg sticky top-0 h-16 mx-auto items-center px-8 shadow-md z-10"
+>
+    <div>
+        <div class="text-xl font-bold text-primary">Claudio Ramírez</div>
+    </div>
     <nav>
         <ul class="flex gap-8 w-full">
             <li>
@@ -12,10 +17,10 @@ import Link from "./Link.astro";
                 <Link href="#experience" label="Experiencia" />
             </li>
             <li>
-                <Link href="#tools" label="Herramientas" />
+                <Link href="#projects" label="Proyectos" />
             </li>
             <li>
-                <Link href="#projects" label="Proyectos" />
+                <Link href="#tools" label="Herramientas" />
             </li>
             <li>
                 <Link href="#about" label="Sobre mi" />
@@ -25,5 +30,4 @@ import Link from "./Link.astro";
             </li> -->
         </ul>
     </nav>
-    <div></div>
 </header>
