@@ -2,42 +2,57 @@
 import HeroButton from "./HeroButton.astro";
 ---
 
-<section class="flex flex-col gap-4 my-12" id="hero">
+<section class="container mx-auto px-4 py-20 lg:py-32" id="hero">
     <div
-        class="w-64 h-64 m-auto rounded-full bg-purple-800 overflow-hidden flex justify-center items-center"
+        class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
     >
-        <img class="" src="images/profile.png" alt="Imagen Claudio Ramirez" />
-    </div>
-
-    <h1 class="text-4xl font-semibold text-center">
-        ¡Hola! Me llamo <br />
-        <span class="text-purple-600 font-bold">Claudio Ramírez</span>
-    </h1>
-    <p class="text-center">
-        Soy un <strong class="text-purple-600 font-semibold"
-            >Ingeniero Cívil en Computación e Informática
-        </strong>
-        con experiencia en desarrollo de aplicaciones web en la región de Magallanes
-        y la antártica chilena, Chile.
-    </p>
-    <div class="flex justify-center gap-5">
-        <HeroButton
-            alt="Enlace a mi GitHub"
-            href="https://github.com/Kallox"
-            icon="images/github.svg"
-            label="GitHub"
-        />
-        <HeroButton
-            alt="Enlace a mi Linkedin"
-            href="https://www.linkedin.com/in/claudio-ramirez-1b2650278/"
-            icon="images/linkedin.svg"
-            label="LinkedIn"
-        />
-        <HeroButton
-            alt="Enlace a mi Curriculum Vitae"
-            href="https://www.linkedin.com/in/claudio-ramirez-1b2650278/"
-            icon="images/pdf.svg"
-            label="CV"
-        />
+        <div class="flex-1">
+            <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-balance">
+                Hola, soy <span class="text-primary">Claudio Ramírez</span>
+            </h1>
+            <p
+                class="text-xl lg:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed"
+            >
+                Ingeniero Civil en Computación e Informática con experiencia en
+                desarrollo de aplicaciones web en la región de Magallanes y la
+                Antártica Chilena, Chile.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <HeroButton
+                    alt="Enlace a mi GitHub"
+                    href="https://github.com/Kallox"
+                    icon="images/github.svg"
+                    label="GitHub"
+                />
+                <HeroButton
+                    alt="Enlace a mi Linkedin"
+                    href="https://www.linkedin.com/in/claudio-ramirez-1b2650278/"
+                    icon="images/linkedin.svg"
+                    label="LinkedIn"
+                />
+                <HeroButton
+                    alt="Enlace a mi Curriculum Vitae"
+                    href="https://www.linkedin.com/in/claudio-ramirez-1b2650278/"
+                    icon="images/pdf.svg"
+                    label="CV"
+                />
+            </div>
+        </div>
+        <div class="relative">
+            <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                <div
+                    class="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary rounded-full blur-2xl opacity-50 pulse-glow"
+                >
+                </div>
+                <div
+                    class="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl"
+                >
+                    <img
+                        src="images/profile-picture.jpg"
+                        alt="Imagen Claudio Ramirez"
+                    />
+                </div>
+            </div>
+        </div>
     </div>
 </section>
