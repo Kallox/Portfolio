@@ -9,12 +9,17 @@
 }
 
 :root {
-  --background: oklch(0.12 0.04 285);
+  --background: oklch(0.11 0.045 270);
   --foreground: oklch(0.95 0.015 285);
-  --primary: oklch(0.58 0.18 285);
+  --primary: oklch(0.67 0.22 275);
   --primary-foreground: oklch(0.98 0.01 285);
-  --muted: oklch(0.2 0.045 285);
-  --muted-foreground: oklch(0.65 0.03 285);
+  --accent: oklch(0.55 0.20 295);
+  --accent-foreground: oklch(0.98 0.01 285);
+  --muted: oklch(0.17 0.05 270);
+  --muted-foreground: oklch(0.68 0.03 285);
+  --card: oklch(0.15 0.05 270);
+  --card-foreground: oklch(0.95 0.015 285);
+  --border: oklch(0.25 0.10 275);
 }
 
 @theme inline {
@@ -24,8 +29,13 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
 }
 
 @layer base {
@@ -54,16 +64,16 @@
 }
 
 .animated-background {
-  background-image: linear-gradient(to right, oklch(0.25 0.08 285 / 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(0.25 0.08 285 / 0.15) 1px, transparent 1px);
+  background-image: linear-gradient(to right, oklch(0.25 0.10 270 / 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.25 0.10 270 / 0.2) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: grid-move 20s linear infinite;
 }
 
 .gradient-overlay {
-  background: radial-gradient(circle at 50% 0%, oklch(0.35 0.15 285 / 0.3) 0%, transparent 60%),
-    radial-gradient(circle at 0% 50%, oklch(0.35 0.18 295 / 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 100% 50%, oklch(0.35 0.12 275 / 0.2) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 0%, oklch(0.40 0.18 275 / 0.35) 0%, transparent 60%),
+    radial-gradient(circle at 0% 50%, oklch(0.35 0.20 290 / 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, oklch(0.35 0.14 265 / 0.25) 0%, transparent 50%);
 }
 
 .pulse-glow {
