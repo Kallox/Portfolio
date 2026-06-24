@@ -10,7 +10,7 @@ const { alt, href, icon, label } = Astro.props;
 ---
 
 <a
-    class="flex items-center justify-center h-10 border border-border rounded-lg p-4 gap-2 text-sm transition-all duration-300 hover:border-primary hover:text-primary"
+    class="flex items-center justify-center h-10 border border-border rounded-lg p-4 gap-2 text-sm transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-[0_0_20px_oklch(0.67_0.22_275/0.3)]"
     href={href}
     target="_blank"><img src={icon} alt={alt} class="h-4" /> {label}</a
 >

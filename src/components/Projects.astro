@@ -28,9 +28,9 @@ const projects = [
 
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
-            projects.map((project) => (
-                <li class="flex flex-col">
-                    <div class="bg-card backdrop-blur shadow-lg rounded-xl border border-border overflow-hidden">
+            projects.map((project, index) => (
+                <li class="flex flex-col" data-animate data-delay={index === 0 ? "1" : "2"}>
+                    <div class="bg-card backdrop-blur shadow-lg rounded-xl border border-border overflow-hidden card-hover">
                         <img
                             src={project.img}
                             alt="project image"

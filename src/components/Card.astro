@@ -3,13 +3,16 @@ interface Props {
     title: string;
     img: string;
     description: string;
+    delay?: string;
 }
 
-const { description, title, img } = Astro.props;
+const { description, title, img, delay } = Astro.props;
 ---
 
 <li
-    class="list-none p-4 bg-card backdrop-blur shadow-lg rounded-xl border border-border"
+    class="list-none p-4 bg-card backdrop-blur shadow-lg rounded-xl border border-border card-hover"
+    data-animate
+    data-delay={delay}
 >
     <div class="flex flex-col items-center text-center gap-3">
         <img

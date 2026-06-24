@@ -7,17 +7,19 @@ import HeroButton from "./HeroButton.astro";
         class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
     >
         <div class="flex-1">
-            <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-balance">
-                Hola, soy <span class="text-primary">Claudio Ramírez</span>
+            <h1 class="text-5xl lg:text-7xl font-bold mb-6 text-balance" data-animate>
+                Hola, soy <span class="text-gradient">Claudio Ramírez</span>
             </h1>
             <p
                 class="text-xl lg:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed"
+                data-animate
+                data-delay="2"
             >
                 Ingeniero Civil en Computación e Informática con experiencia en
                 desarrollo de aplicaciones web en la región de Magallanes y la
                 Antártica Chilena, Chile.
             </p>
-            <div class="flex flex-wrap gap-4">
+            <div class="flex flex-wrap gap-4" data-animate data-delay="3">
                 <HeroButton
                     alt="Enlace a mi GitHub"
                     href="https://github.com/Kallox"
@@ -38,14 +40,14 @@ import HeroButton from "./HeroButton.astro";
                 />
             </div>
         </div>
-        <div class="relative">
-            <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+        <div class="relative" data-animate="scale-in" data-delay="4">
+            <div class="relative w-72 h-72 lg:w-96 lg:h-96 animate-float">
                 <div
                     class="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary rounded-full blur-2xl opacity-50 pulse-glow"
                 >
                 </div>
                 <div
-                    class="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl"
+                    class="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl transition-transform duration-500 hover:scale-105"
                 >
                     <img
                         src="images/profile-picture.jpg"
