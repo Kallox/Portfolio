@@ -3,6 +3,15 @@ import SectionTitle from "./SectionTitle.astro";
 
 const projects = [
     {
+        title: "JAMES",
+        description:
+            "Herramienta web para visualizar y explorar JSON de forma clara y estructurada.",
+        img: "images/projects/james.png",
+        live: "https://james.claudramir.dev/",
+        repository: "https://github.com/Kallox/JAMES",
+        tecnologies: ["vue", "tailwind"],
+    },
+    {
         title: "DSpace Form Builder",
         description:
             "Pagina web para la creación y edición de formularios de DSpace",
@@ -26,7 +35,7 @@ const projects = [
 <section id="projects" class="container mx-auto px-4 py-16">
     <SectionTitle title="Proyectos personales" />
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
             projects.map((project, index) => (
                 <li class="flex flex-col" data-animate data-delay={index === 0 ? "1" : "2"}>
@@ -42,7 +51,7 @@ const projects = [
                             <h3 class="text-xl font-bold mb-2">
                                 {project.title}
                             </h3>
-                            <p class="text-muted-foreground mb-4 leading-relaxed">
+                            <p class="text-muted-foreground mb-4 leading-relaxed line-clamp-2">
                                 {project.description}
                             </p>
                             <hr class="my-4" />
